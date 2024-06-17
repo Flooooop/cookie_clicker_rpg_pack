@@ -25,13 +25,9 @@ out float vertexDistance;
 out vec4 vertexColor;
 out vec2 texCoord0;
 
-out float transition;
-
 float GameTimeSeconds = GameTime*1200;
 
 void main() {
-
-    transition = 0.;
 
     gl_Position = ProjMat * ModelViewMat * vec4(Position, 1.0);
 
