@@ -29,8 +29,8 @@ jobs:
             ['**/{LICENSE}']
             force_include = true
 
-            # Force include shaders
-            ['**/shaders/*']
+            # shaders!!
+            ['**/*?.{fsh,vsh,glsl}']
             force_include = true
 
       - name: Tag and create release
