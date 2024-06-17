@@ -28,6 +28,11 @@ jobs:
             # Include LICENSE
             ['**/{LICENSE}']
             force_include = true
+
+            # Force include shaders
+            ['**/shaders/*']
+            force_include = true
+
       - name: Tag and create release
         uses: softprops/action-gh-release@v2
         with:
