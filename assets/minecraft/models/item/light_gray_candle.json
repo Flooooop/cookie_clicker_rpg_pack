@@ -12,9 +12,12 @@
         {"predicate": {"custom_model_data":101}, "model": "gui:button/back"},
         {"predicate": {"custom_model_data":102}, "model": "gui:button/new"},
         {"predicate": {"custom_model_data":103}, "model": "gui:button/exit"},
+        {"predicate": {"custom_model_data":104}, "model": "gui:button/up"},
+        {"predicate": {"custom_model_data":105}, "model": "gui:button/down"},
 
-        {"predicate": {"custom_model_data":200}, "model": "gui:button/test"},
+        {"predicate": {"custom_model_data":200}, "model": "gui:class/knight"},
 
+        {"predicate": {"custom_model_data":300}, "model": "gui:race/human"},
 
         {"predicate": {"custom_model_data":10000}, "model" : "item/light_gray_candle"}
 	]

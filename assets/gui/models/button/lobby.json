@@ -1,6 +1,6 @@
 {
-	"parent": "gui:button/3x1",
+	"parent": "gui:3x1",
 	"textures": {
-		"button": "gui:item/lobby"
+		"image": "gui:item/lobby"
 	}
 }
