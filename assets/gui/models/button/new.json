@@ -1,6 +1,6 @@
 {
 	"parent": "gui:button/1x1",
 	"textures": {
-		"button": "gui:item/back"
+		"button": "gui:item/new"
 	}
 }
