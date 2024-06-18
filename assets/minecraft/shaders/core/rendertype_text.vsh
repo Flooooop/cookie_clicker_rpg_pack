@@ -4,7 +4,7 @@
 #moj_import <colours.glsl>
 #moj_import <util.glsl>
 
-#define PI 3.14159265
+#define PI 3.14159265;
 
 in vec3 Position;
 in vec4 Color;
@@ -38,9 +38,8 @@ void main() {
     int gui_scale = guiScale(ProjMat, ScreenSize);
     int id = gl_VertexID%4;
 
-    if (isEither(Color, NO_SHADOW)) {
-        vertexColor.rgb = vec3(1., 1., 1.);
+    if (isShadow(Color, NO_SHADOW)) {vertexColor.a = 0;}
+    if (isColor(Color, NO_SHADOW)) {vertexColor.rgb = vec3(1.,1.,1.);}
 
-        if (isShadow(Color, NO_SHADOW)) vertexColor.a = 0.;
-    }
+    if ( isColor( Color, GRAY ) && Position.z == 0 ) {vertexColor.rgb = vec3(0.243,0.207,0.274);}
 }

@@ -1,4 +1,5 @@
-#define NO_SHADOW vec3(76., 69., 22.) // #4C4516
+#define NO_SHADOW vec3(76., 64., 22.) // #4C4016
+#define GRAY vec3( 64., 64., 64. ) // #404040
 
 bool isColor(vec4 originColor, vec3 color) {
     return (originColor*255.).xyz == color;

@@ -1,0 +1,9 @@
+{
+  "parent": "gui:head",
+  "textures": {
+    "layer0": "gui:head"
+  },
+	"overrides": [
+		{"predicate": {"custom_model_data":10000}, "model": "item/template_skull"}
+	]
+}

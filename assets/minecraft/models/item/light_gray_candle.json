@@ -1,0 +1,13 @@
+{
+    "parent": "minecraft:item/generated",
+    "textures": {
+        "layer0": "minecraft:item/light_gray_candle"
+    },
+    "overrides": [
+		{"predicate": {"custom_model_data":1}, "model": "gui:fill"},
+        {"predicate": {"custom_model_data":2}, "model": "gui:empty"},
+        {"predicate": {"custom_model_data":3}, "model": "gui:button/lobby"},
+        {"predicate": {"custom_model_data":4}, "model": "gui:button/back"},
+		{"predicate": {"custom_model_data":10000}, "model" : "item/light_gray_candle"}
+	]
+}
