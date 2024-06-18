@@ -13,6 +13,8 @@
         {"predicate": {"custom_model_data":102}, "model": "gui:button/new"},
         {"predicate": {"custom_model_data":103}, "model": "gui:button/exit"},
 
+        {"predicate": {"custom_model_data":200}, "model": "gui:button/test"},
+
 
         {"predicate": {"custom_model_data":10000}, "model" : "item/light_gray_candle"}
 	]

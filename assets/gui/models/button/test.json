@@ -1,0 +1,6 @@
+{
+	"parent": "gui:button/3x3",
+	"textures": {
+		"button": "gui:item/test"
+	}
+}

@@ -30,7 +30,7 @@ void main() {
     if (tooltip == 1) {
         if (all(greaterThan(size, vec2(1e3)))) {discard; return;}
 
-        if ((pmax.x - pmin.x) < 16.) {discard; return;}
+        if ((pmax.x - pmin.x) < 15.) {discard; return;}
 
         int i = 0;
         ivec4 corner = ivec4(abs(vec4(pmin, pmax) - Pos.xyxy));
