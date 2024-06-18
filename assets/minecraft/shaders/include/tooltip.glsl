@@ -1,4 +1,3 @@
-//generated for tooltip shader by Godlander
 vec2 pad = vec2(4,4);
 ivec3 sizes = ivec3(1,1,3);
 uint base = 0x3e3546ffu;
