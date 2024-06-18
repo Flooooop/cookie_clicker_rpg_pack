@@ -11,6 +11,7 @@ in vec3 Pos;
 in vec3 Pos1;
 in vec3 Pos2;
 in vec3 Pos3;
+in vec3 pos4;
 
 out vec4 fragColor;
 
@@ -23,14 +24,15 @@ void main() {
     vec2 p1 = Pos1.xy / Pos1.z;
     vec2 p2 = Pos2.xy / Pos2.z;
     vec2 p3 = Pos3.xy / Pos3.z;
-    vec2 pmax = max(max(p1,p2),p3);
-    vec2 pmin = min(min(p1,p2),p3);
+    vec2 p4 = pos4.xy / pos4.z;
+    vec2 pmax = max(max(p1,p3),p4);
+    vec2 pmin = min(min(p1,p3),p4);
     vec2 size = vec2(pmax - pmin);
 
     if (tooltip == 1) {
-        if (all(greaterThan(size, vec2(1e3)))) {discard; return;}
+        if (all(greaterThan(vec2(20.), size))) {discard; return;}
 
-        if ((pmax.x - pmin.x) < 15.) {discard; return;}
+        if (size.x < 15) {discard; return;}
 
         int i = 0;
         ivec4 corner = ivec4(abs(vec4(pmin, pmax) - Pos.xyxy));

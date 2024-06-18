@@ -13,6 +13,7 @@ out vec3 Pos;
 out vec3 Pos1;
 out vec3 Pos2;
 out vec3 Pos3;
+out vec3 Pos4;
 
 #define hex(i) vec4((i&0xFF000000u)>>24,(i&0xFF0000u)>>16,(i&0xFF00u)>>8,(i&0xFFu))/255.
 const vec2[] corners = vec2[](vec2(1, 1),vec2(1, -1),vec2(-1, -1),vec2(-1, 1));
@@ -37,6 +38,7 @@ void main() {
         case 0: Pos1 = vec3(Pos.xy, 1); break;
         case 1: Pos2 = vec3(Pos.xy, 1); break;
         case 2: Pos3 = vec3(Pos.xy, 1); break;
+        case 3: Pos4 = vec3(Pos.xy, 1); break;
     }
 
     gl_Position = ProjMat * ModelViewMat * vec4(Pos, 1.0);
