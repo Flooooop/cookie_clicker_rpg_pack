@@ -18,6 +18,11 @@ jobs:
             # This is the default value for pack_directory when no PackSquash options are defined
             pack_directory = '.'
 
+            automatic_minecraft_quirks_detection = true
+            never_store_squash_times = true
+            skip_pack_icon = false
+            validate_pack_metadata_file = true
+
             # Set a custom output file path to work with the generated ZIP file
             # without needing to download its artifact in a separate step
             output_file_path = '/tmp/pack.zip'
@@ -25,12 +30,33 @@ jobs:
             # Obfuscate and optimize resourcepack as much as possible.
             zip_spec_conformance_level = 'disregard'
 
+            # Per file options
+
+            # Ogg files do not get transcoded
+            ['**/*?.ogg']
+            transcode_ogg = false
+
+            # Lossless music files get pitch shifted and compressed with good quality
+            ['**/*?.{flac,wav}']
+            channels = 2
+            sampling_frequency = 44100
+            target_pitch = 1.5
+            target_bitrate_control_metric = 96000
+
+            # JSON files with comments get prettified and nothing is removed from them
+            ['**/*.jsonc']
+            minify_json = false
+            delete_bloat_keys = false
+
+            # Compress textures losslessly no matter what. Keep them small
+            ['**/*.png']
+            image_data_compression_iterations = 15
+            color_quantization_target = 'none'
+            maximum_width_and_height = 2048
+            skip_alpha_optimizations = true
+
             # Include LICENSE
             ['**/{LICENSE}']
-            force_include = true
-
-            # shaders!!
-            ['**/*?.{fsh,vsh,glsl}']
             force_include = true
 
       - name: Tag and create release

@@ -18,6 +18,7 @@
         {"predicate": {"custom_model_data":200}, "model": "gui:class/knight"},
 
         {"predicate": {"custom_model_data":300}, "model": "gui:race/human"},
+        {"predicate": {"custom_model_data":301}, "model": "gui:race/wumpus"},
 
         {"predicate": {"custom_model_data":10000}, "model" : "item/light_gray_candle"}
 	]

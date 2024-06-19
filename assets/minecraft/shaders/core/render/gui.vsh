@@ -19,12 +19,14 @@ out vec3 Pos4;
 const vec2[] corners = vec2[](vec2(1, 1),vec2(1, -1),vec2(-1, -1),vec2(-1, 1));
 bool isgui(mat4 ProjMat) {return ProjMat[2][3] == 0.0;}
 
-#moj_import <tooltip.glsl>
-
 void main() {
     Pos = Position;
     vertexColor = Color;
+    
     int corner = gl_VertexID % 4;
+
+    // Moved from tooltip.glsl to avoid packsquash incompatibility
+    vec2 pad = vec2(4,4);
 
     tooltip = 0;
     if (isgui(ProjMat) && Position.z > 300 && Position.z < 500) {

@@ -15,8 +15,6 @@ in vec3 pos4;
 
 out vec4 fragColor;
 
-#moj_import <tooltip.glsl>
-
 void main() {
     vec4 color = vertexColor;
     float time = GameTime * 1200;
@@ -28,6 +26,19 @@ void main() {
     vec2 pmax = max(max(p1,p3),p4);
     vec2 pmin = min(min(p1,p3),p4);
     vec2 size = vec2(pmax - pmin);
+
+    // Moved from tooltip.glsl to avoid packsquash incompatibility
+    uint base = 0x3e3546ffu;
+    uint[] tl = uint[](0x2e222fffu,0x2e222fffu,0x2e222fffu,0x2e222fffu,0x9babb2ffu,0x9babb2ffu,0x2e222fffu,0x9babb2ffu,0x2e222fffu);
+    uint[] tr = uint[](0x2e222fffu,0x2e222fffu,0x2e222fffu,0x9babb2ffu,0x9babb2ffu,0x2e222fffu,0x2e222fffu,0x9babb2ffu,0x2e222fffu);
+    uint[] bl = uint[](0x2e222fffu,0x694f62ffu,0x2e222fffu,0x2e222fffu,0x694f62ffu,0x694f62ffu,0x2e222fffu,0x2e222fffu,0x2e222fffu);
+    uint[] br = uint[](0x2e222fffu,0x694f62ffu,0x2e222fffu,0x694f62ffu,0x694f62ffu,0x2e222fffu,0x2e222fffu,0x2e222fffu,0x2e222fffu);
+    uint[] t = uint[](0x2e222fffu,0x9babb2ffu,0x2e222fffu);
+    uint[] l = uint[](0x2e222fffu,0x7f708affu,0x2e222fffu);
+    uint[] r = uint[](0x2e222fffu,0x7f708affu,0x2e222fffu);
+    uint[] b = uint[](0x2e222fffu,0x694f62ffu,0x2e222fffu);
+    ivec3 sizes = ivec3(1,1,3);
+
 
     if (tooltip == 1) {
         if (all(greaterThan(vec2(20.), size))) {discard; return;}
@@ -56,7 +67,7 @@ void main() {
             case 12: //botright, 1100
                 i = (sizes.z-corner.z-1) + (sizes.z-corner.w-1) * sizes.z; color = hex(br[i]); break;
             default:
-                color = hex(base);
+                color = hex(0x3e3546ffu);
         }
     }
     if (color.a == 0) discard;
