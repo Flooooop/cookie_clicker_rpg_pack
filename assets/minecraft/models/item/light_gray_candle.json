@@ -20,6 +20,13 @@
         {"predicate": {"custom_model_data":300}, "model": "gui:race/human"},
         {"predicate": {"custom_model_data":301}, "model": "gui:race/wumpus"},
 
+        {"predicate": {"custom_model_data":1000}, "model": "gui:pressed/lobby"},
+        {"predicate": {"custom_model_data":1001}, "model": "gui:pressed/back"},
+        {"predicate": {"custom_model_data":1002}, "model": "gui:pressed/new"},
+        {"predicate": {"custom_model_data":1003}, "model": "gui:pressed/exit"},
+        {"predicate": {"custom_model_data":1004}, "model": "gui:pressed/up"},
+        {"predicate": {"custom_model_data":1005}, "model": "gui:pressed/down"},
+
         {"predicate": {"custom_model_data":10000}, "model" : "item/light_gray_candle"}
 	]
 }

@@ -1,6 +1,6 @@
 {
 	"parent": "gui:1x1",
 	"textures": {
-		"image": "gui:item/button/exit"
+		"image": "gui:item/pressed/exit"
 	}
 }

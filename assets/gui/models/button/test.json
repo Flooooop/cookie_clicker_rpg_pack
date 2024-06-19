@@ -1,6 +1,0 @@
-{
-	"parent": "gui:3x3",
-	"textures": {
-		"image": "gui:item/test"
-	}
-}

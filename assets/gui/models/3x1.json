@@ -1,8 +1,8 @@
 {
     "elements": [
         {
-            "from": [-5.5, 3.5, 0],
-            "to": [21.5, 12.5, 0],
+            "from": [-5.5, 3.5, 16],
+            "to": [21.5, 12.5, 16],
             "faces": {
                 "north": {"uv": [0, 0, 13.5, 9], "texture": "#image"},
                 "east": {"uv": [0, 0, 0, 9], "texture": "#image"},
@@ -16,7 +16,7 @@
     "gui_light": "front",
     "display": {
         "gui": {
-            "scale": [2, 2, 2]
+            "scale": [2, 2, 10]
         },
         "thirdperson_righthand": {
             "scale": [0, 0, 0]
