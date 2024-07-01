@@ -1,0 +1,6 @@
+{
+	"parent": "gui:3x1",
+	"textures": {
+		"image": "gui:item/pressed/next"
+	}
+}

@@ -1,0 +1,5 @@
+{
+    "providers": [
+        {"type": "bitmap","file": "map:template.png","ascent": 0,"height": 256,"chars": ["\u0001"]}
+    ]
+}
