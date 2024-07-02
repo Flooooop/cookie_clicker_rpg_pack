@@ -1,3 +1,4 @@
 {
-    "map.template" : "\u0001"
+    "map.template_left" : "\u0001",
+    "map.template_right" : "\u1001"
 }
