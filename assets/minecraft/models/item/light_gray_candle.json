@@ -19,6 +19,8 @@
         {"predicate": {"custom_model_data":108}, "model": "gui:button/right_small"},
         {"predicate": {"custom_model_data":109}, "model": "gui:button/help"},
         {"predicate": {"custom_model_data":110}, "model": "gui:button/warning"},
+        {"predicate": {"custom_model_data":111}, "model": "gui:button/ready"},
+        {"predicate": {"custom_model_data":112}, "model": "gui:button/not_ready"},
 
         {"predicate": {"custom_model_data":200}, "model": "gui:class/knight"},
         {"predicate": {"custom_model_data":201}, "model": "gui:class/druid"},
@@ -27,6 +29,7 @@
 
         {"predicate": {"custom_model_data":300}, "model": "gui:race/human"},
         {"predicate": {"custom_model_data":301}, "model": "gui:race/wumpus"},
+        {"predicate": {"custom_model_data":302}, "model": "gui:race/cat"},
 
         {"predicate": {"custom_model_data":1000}, "model": "gui:pressed/lobby"},
         {"predicate": {"custom_model_data":1001}, "model": "gui:pressed/back"},
@@ -36,6 +39,8 @@
         {"predicate": {"custom_model_data":1005}, "model": "gui:pressed/down"},
         {"predicate": {"custom_model_data":1006}, "model": "gui:pressed/next"},
         {"predicate": {"custom_model_data":1010}, "model": "gui:pressed/warning"},
+        {"predicate": {"custom_model_data":1011}, "model": "gui:pressed/ready"},
+        {"predicate": {"custom_model_data":1012}, "model": "gui:pressed/not_ready"},
 
         {"predicate": {"custom_model_data":10000}, "model" : "item/light_gray_candle"}
 	]
