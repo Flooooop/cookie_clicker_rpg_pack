@@ -1,0 +1,6 @@
+{
+	"parent": "gui:3x5",
+	"textures": {
+		"image": "gui:item/button/not_ready"
+	}
+}
